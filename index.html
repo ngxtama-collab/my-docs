@@ -1,31 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <title>Tài liệu kỹ thuật</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="Tài liệu kỹ thuật Proxmox VE - Backup, Restore, Setup, Troubleshoot">
+  <meta property="og:title" content="Tài liệu kỹ thuật">
+  <meta property="og:description" content="Docsify site cho Proxmox VE">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Docsify theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+
   <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #e0f7fa);
+      color: #333;
+    }
+
+    /* Container Docsify */
+    #app {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Sidebar style */
+    .sidebar {
+      background: #007bff;
+      color: #fff;
+    }
+    .sidebar ul li a {
+      color: #fff !important;
+    }
+    .sidebar ul li.active > a {
+      background: rgba(255,255,255,0.2);
+      border-radius: 8px;
+    }
+
     /* Style cho nút Download */
     .download-btn {
       display: inline-block;
-      padding: 8px 15px;
-      background: #007bff;
+      padding: 10px 18px;
+      background: linear-gradient(45deg, #ff6b6b, #f06595, #845ef7);
       color: #fff;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      transition: background 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      background-size: 200% 200%;
+      animation: gradientMove 5s ease infinite;
     }
     .download-btn:hover {
-      background: #0056b3;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     }
     .download-container {
       position: fixed;
       top: 10px;
       right: 10px;
       z-index: 999;
+    }
+
+    /* Gradient animation */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Responsive cho mobile */
+    @media (max-width: 600px) {
+      .download-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+      #app {
+        margin: 10px;
+        padding: 15px;
+      }
     }
   </style>
 </head>
@@ -46,9 +112,16 @@
   <!-- Cấu hình Docsify -->
   <script>
     window.$docsify = {
+      name: '📘 Tài liệu kỹ thuật',
+      repo: 'https://github.com/ngxtama-collab/my-docs',
       loadSidebar: true,
       subMaxLevel: 2,
-      search: 'auto'
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '🔍 Tìm kiếm...',
+        noData: '❌ Không có kết quả'
+      }
     }
   </script>
 
