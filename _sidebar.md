@@ -1,4 +1,26 @@
 - **Proxmox VE**
-  - [Backup & Restore](Proxmox VE/Backup & Restore/)
-  - [Setup Proxmox](Proxmox VE/Setup Proxmox/)
-  - [Troubleshoot Proxmox](Proxmox VE/Troubleshoot Proxmox/)
+  - **Backup & Restore**
+    - [Cài đặt và cấu hình Proxmox Backup Server](Proxmox%20VE/Backup%20&%20Restore/Cài%20đặt%20và%20cấu%20hình%20Proxmox%20Backup%20Server.docx)
+    - [Hướng dẫn cấu hình Veeam Backup cho Proxmox](Proxmox%20VE/Backup%20&%20Restore/Hướng%20dẫn%20cấu%20hình%20Veeam%20Backup%20cho%20Proxmox.docx)
+
+  - **Setup Proxmox**
+    - [Add RBD Ceph Storage](Proxmox%20VE/Setup%20Proxmox/Add%20RBD%20Ceph%20Storage.docx)
+    - [Cài đặt mst tools trên Proxmox Server](Proxmox%20VE/Setup%20Proxmox/Cài%20đặt%20mst%20tools%20trên%20Proxmox%20Server%20để%20kiểm%20tra%20ổ%20đĩa.docx)
+    - [Cài đặt và cấu hình Proxmox VE](Proxmox%20VE/Setup%20Proxmox/Cài%20đặt%20và%20cấu%20hình%20Proxmox%20VE.docx)
+    - [Cài Zabbix Agent trên Proxmox](Proxmox%20VE/Setup%20Proxmox/Cài%20Zabbix%20Agent%20trên%20Proxmox.docx)
+    - [Cấu hình Nginx Proxy cho VM trên Proxmox](Proxmox%20VE/Setup%20Proxmox/Cấu%20hình%20Nginx%20Proxy%20cho%20VM%20trên%20Proxmox.docx)
+    - [Cấu hình Proxmox với Ceph Storage](Proxmox%20VE/Setup%20Proxmox/Cấu%20hình%20Proxmox%20với%20Ceph%20Storage.docx)
+    - [Force NTP SYNC trên Proxmox bằng Chrony](Proxmox%20VE/Setup%20Proxmox/Force%20NTP%20SYNC%20trên%20Proxmox%20bằng%20Chrony.docx)
+    - [HA Proxmox Cluster](Proxmox%20VE/Setup%20Proxmox/HA%20Proxmox%20Cluster.docx)
+    - [Hướng dẫn import disk vmdk to Proxmox](Proxmox%20VE/Setup%20Proxmox/Hướng%20dẫn%20import%20disk%20vmdk%20to%20Proxmox.docx)
+    - [Migrate VM giữa hai host Proxmox không cùng cluster](Proxmox%20VE/Setup%20Proxmox/Migrate%20VM%20giữa%20hai%20host%20Proxmox%20không%20cùng%20cluster.docx)
+    - [Tạo API Token để kết nối Proxmox](Proxmox%20VE/Setup%20Proxmox/Tạo%20API%20Token%20để%20kết%20nối%20Proxmox.docx)
+
+  - **Troubleshoot Proxmox**
+    - [Backup Restore Host](Proxmox%20VE/Troubleshoot%20Proxmox/Backup%20Restore%20Host.docx)
+    - [Maintenance, Reboot Proxmox host có cluster](Proxmox%20VE/Troubleshoot%20Proxmox/Maintenance,%20Reboot%20Proxmox%20host%20có%20cluster.docx)
+    - [Quy trình update Proxmox Cluster, 1 số lưu ý](Proxmox%20VE/Troubleshoot%20Proxmox/Quy%20trình%20update%20Proxmox%20Cluster,%201%20số%20lưu%20lưu%20ý.docx)
+    - [Rename Proxmox Host](Proxmox%20VE/Troubleshoot%20Proxmox/Rename%20Proxmox%20Host.docx)
+    - [Replace Host Lỗi](Proxmox%20VE/Troubleshoot%20Proxmox/Replace%20Host%20Lỗi.docx)
+    - [Restore VM trên PVE Backup](Proxmox%20VE/Troubleshoot%20Proxmox/Restore%20VM%20trên%20PVE%20Backup.docx)
+    - [Xử lý lỗi host sai thông tin SSH key khi cài lại](Proxmox%20VE/Troubleshoot%20Proxmox/Xử%20lý%20lỗi%20host%20sai%20thông%20tin%20SSH%20key%20khi%20cài%20lại.docx)

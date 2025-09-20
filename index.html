@@ -7,7 +7,22 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
 </head>
 <body>
+  <!-- Nút download -->
+  <div style="position: fixed; top: 10px; right: 10px; z-index: 999;">
+    <a href="https://github.com/ngxtama-collab/my-docs/archive/refs/heads/main.zip" 
+       target="_blank" 
+       style="display:inline-block;padding:8px 15px;
+              background:#007bff;color:#fff;
+              font-weight:bold;text-decoration:none;
+              border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,0.2);">
+      ⬇️ Download
+    </a>
+  </div>
+
+  <!-- Docsify App -->
   <div id="app">Loading...</div>
+
+  <!-- Cấu hình Docsify -->
   <script>
     window.$docsify = {
       loadSidebar: true,
@@ -15,7 +30,10 @@
       search: 'auto'
     }
   </script>
+
+  <!-- Docsify core -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- Plugin search -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
