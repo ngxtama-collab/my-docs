@@ -1,22 +1,26 @@
 Bước 1: Tìm chính xác ID của VM cần restore
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image1.png){width="6.5in"
-height="2.6486111111111112in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image1.png"
+style="width:6.5in;height:2.64861in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Bước 2: Cần restore VM lên host nào thì truy cập đúng host đó và chọn
 storage BACKUP-STORE và tìm các bản restore của VMID
 
 VD: restore VM lên host quanta2-n1
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image2.png){width="6.5in" height="2.69375in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image2.png"
+style="width:6.5in;height:2.69375in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Bước 3: Chọn chính xác ngày cần restore và nhấn nút Restore
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image3.png){width="6.5in"
-height="2.620138888888889in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image3.png"
+style="width:6.5in;height:2.62014in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Bước 4: Sau khi nhấn Restore sẽ hiện popup các thông tin
 
@@ -27,38 +31,45 @@ Storage: Storage sẽ lưu disk của VM mới
 VM ID: chọn 1 ID cho VM Restore, chắc chắn là ID duy nhất không trùng
 với VM đã có, nếu trùng thì khung VM ID sẽ hiện đỏ
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image4.png){width="4.78125in"
-height="2.5416666666666665in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image4.png"
+style="width:4.78125in;height:2.54167in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 VM ID đã tồn tài
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image5.png){width="4.78125in"
-height="2.5416666666666665in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image5.png"
+style="width:4.78125in;height:2.54167in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Tiến hành Restore
 
-![A screenshot of a computer program AI-generated content may be
-incorrect.](media/image6.png){width="6.5in"
-height="4.094444444444444in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image7.png){width="6.5in"
-height="4.090277777777778in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image6.png"
+style="width:6.5in;height:4.09444in"
+alt="A screenshot of a computer program AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image7.png"
+style="width:6.5in;height:4.09028in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 **Bước 6: Sau khi restore process hoàn tất, sẽ tạo ra 1 VM mới, phải
 thay đổi tên VM để tránh bị nhầm lẫn với VM cũ**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image8.png){width="6.5in"
-height="2.1465277777777776in"}![](media/image9.png){width="6.5in"
-height="2.2909722222222224in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image8.png"
+style="width:6.5in;height:2.14653in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image9.png"
+style="width:6.5in;height:2.29097in" />
 
 Bước 7: Disable hoặc đổi cấu hình network VM trước khi ON lên, tránh bị
 trùng IP với VM cũ đang chạy
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image10.png){width="6.5in"
-height="2.2618055555555556in"}![A screenshot of a computer AI-generated
-content may be
-incorrect.](media/image11.png){width="5.885416666666667in"
-height="2.6979166666666665in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image10.png"
+style="width:6.5in;height:2.26181in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image11.png"
+style="width:5.88542in;height:2.69792in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />

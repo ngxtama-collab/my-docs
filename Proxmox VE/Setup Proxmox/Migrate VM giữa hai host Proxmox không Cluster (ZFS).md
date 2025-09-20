@@ -1,10 +1,10 @@
 **Tài liệu kỹ thuật: Migrate VM giữa hai host Proxmox không Cluster
 (ZFS)**
 
-**Phân loại mục:**\
-📁 Virtualization\
-  📁 Proxmox VE\
-    📁 Setup\
+**Phân loại mục:**  
+📁 Virtualization  
+  📁 Proxmox VE  
+    📁 Setup  
       📄 Migrate VM giữa hai host không cluster (ZFS)
 
 **🌟 Mục tiêu**
@@ -48,14 +48,14 @@ Datastore/vm-100-disk-1
 
 **3️⃣ Trên host B - tạo VM mới (ID 100)**
 
-qm create 100 \--name TenVM \--memory 4096 \--cores 4 \--net0
+qm create 100 --name TenVM --memory 4096 --cores 4 --net0
 virtio,bridge=vmbr0
 
 **4️⃣ Gắn disk ZFS vào VM 100**
 
-qm set 100 \--scsi0 Datastore:vm-100-disk-0
+qm set 100 --scsi0 Datastore:vm-100-disk-0
 
-qm set 100 \--scsi1 Datastore:vm-100-disk-1
+qm set 100 --scsi1 Datastore:vm-100-disk-1
 
 **5️⃣ Khởi động và kiểm tra VM**
 
@@ -69,12 +69,12 @@ Nếu bạn muốn giữ nguyên VM ID 110, chỉ cần:
 
 - Tạo lại VM trên host B với ID 110
 
-qm create 110 \--name TenVM \--memory 4096 \--cores 4 \--net0
+qm create 110 --name TenVM --memory 4096 --cores 4 --net0
 virtio,bridge=vmbr0
 
-qm set 110 \--scsi0 Datastore:vm-110-disk-0
+qm set 110 --scsi0 Datastore:vm-110-disk-0
 
-qm set 110 \--scsi1 Datastore:vm-110-disk-1
+qm set 110 --scsi1 Datastore:vm-110-disk-1
 
 **🔐 Lưu ý bảo mật và kỹ thuật**
 

@@ -1,4 +1,4 @@
-\"
+"
 
 Bạn đã có file:
 
@@ -14,24 +14,23 @@ Mở file 10.32.254.10_Disk_0.vmdk bằng nano hoặc vim:
 
 nano 10.32.254.10_Disk_0.vmdk
 
-Đảm bảo nó giống **chuẩn sau**: ( Thêm \"\" ở phần createType nếu thiếu
-)
+Đảm bảo nó giống **chuẩn sau**: ( Thêm "" ở phần createType nếu thiếu )
 
 \# Disk DescriptorFile
 
 version=1
 
-encoding=\"\"UTF-8\"\"
+encoding=""UTF-8""
 
 CID=fffffffe
 
 parentCID=ffffffff
 
-createType=\"monolithicFlat\"
+createType="monolithicFlat"
 
 \# Extent description
 
-RW 936638464 FLAT \"\"10.32.254.10_Disk_0-flat.vmdk\"\" 0
+RW 936638464 FLAT ""10.32.254.10_Disk_0-flat.vmdk"" 0
 
 convert vmdk to raw
 
@@ -61,11 +60,11 @@ qemu-img info vm-110-disk-0.qcow2
 
 **2. Import file vào** local-lvm
 
-qm importdisk 110 vm-110-disk-0.qcow2 local-lvm \--format raw
+qm importdisk 110 vm-110-disk-0.qcow2 local-lvm --format raw
 
 3\. Gán disk vào VM
 
-qm set 110 \--scsi0 local-lvm:vm-110-disk-0
+qm set 110 --scsi0 local-lvm:vm-110-disk-0
 
 4\. Kiểm tra cấu hình
 

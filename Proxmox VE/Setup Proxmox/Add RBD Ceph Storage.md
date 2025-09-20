@@ -1,10 +1,12 @@
 1 . Cài Ceph package cho OS
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image1.png){width="6.5in"
-height="3.0347222222222223in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image2.png){width="6.5in"
-height="4.607638888888889in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image1.png"
+style="width:6.5in;height:3.03472in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image2.png"
+style="width:6.5in;height:4.60764in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Chỉ cài đặt các packages ko cần configure thêm
 
@@ -19,6 +21,7 @@ ceph.client.admin.keyring -\> mkdir /etc/pve/priv/
 
 Tạo RBD storage
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image3.png){width="6.5in"
-height="3.1770833333333335in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image3.png"
+style="width:6.5in;height:3.17708in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />

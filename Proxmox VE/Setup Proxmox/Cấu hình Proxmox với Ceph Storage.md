@@ -55,7 +55,7 @@ Sau đó, thêm các node còn lại vào cluster:
 
 pvecm nodes
 
-pvecm updatecerts \--force
+pvecm updatecerts --force
 
 \# Trên các node còn lại
 
@@ -93,7 +93,7 @@ apt install proxmox-ceph
 
 Trên node đầu tiên, tạo Ceph Monitor:
 
-pveceph init \--network 10.10.10.0/24
+pveceph init --network 10.10.10.0/24
 
 Trên các node còn lại, thêm Ceph Monitor:
 
@@ -120,13 +120,13 @@ pveceph osd create /dev/sdX
 
 Nếu bạn muốn sử dụng SSD cho journal và HDD cho data:
 
-pveceph osd create /dev/sdX \--journal /dev/sdY
+pveceph osd create /dev/sdX --journal /dev/sdY
 
 **5. Tạo Ceph Pool**
 
 Tạo Ceph Pool để lưu trữ dữ liệu:
 
-pveceph pool create poolname \--pg_num 128 \--pgp_num 128
+pveceph pool create poolname --pg_num 128 --pgp_num 128
 
 **Cấu hình Ceph làm backend cho Proxmox**
 
@@ -154,7 +154,7 @@ pveceph mds create
 
 \# Tạo CephFS
 
-pveceph fs create \--name cephfs \--pg_num 128 \--add-storage
+pveceph fs create --name cephfs --pg_num 128 --add-storage
 
 **Kiểm tra trạng thái Ceph**
 

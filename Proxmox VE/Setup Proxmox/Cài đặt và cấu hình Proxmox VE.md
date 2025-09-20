@@ -2,26 +2,34 @@
 
 Chọn Install Proxmox VE
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image1.png){width="6.5in" height="4.75in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image1.png"
+style="width:6.5in;height:4.75in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image2.png){width="6.5in"
-height="4.8909722222222225in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image2.png"
+style="width:6.5in;height:4.89097in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Chọn disk boot
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image3.png){width="6.5in"
-height="4.888194444444444in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image4.png){width="6.5in"
-height="4.892361111111111in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image5.png){width="6.5in"
-height="4.8909722222222225in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image6.png){width="6.5in"
-height="4.888194444444444in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image7.png){width="6.5in"
-height="1.9534722222222223in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image3.png"
+style="width:6.5in;height:4.88819in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image4.png"
+style="width:6.5in;height:4.89236in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image5.png"
+style="width:6.5in;height:4.89097in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image6.png"
+style="width:6.5in;height:4.88819in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image7.png"
+style="width:6.5in;height:1.95347in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 2\. Hướng dẫn cấu hình network trên Proxmox VE
 
@@ -30,42 +38,49 @@ height="1.9534722222222223in"}
 Bridge sẽ tạo ra một card mạng vmbr0 kết nối với card enp94s0f0np0 được
 cấu hình trên: /etc/network/interfaces
 
-![A computer screen with white text AI-generated content may be
-incorrect.](media/image8.png){width="4.239583333333333in"
-height="3.5208333333333335in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image8.png"
+style="width:4.23958in;height:3.52083in"
+alt="A computer screen with white text AI-generated content may be incorrect." />
 
 Trên giao diện web của Proxmox vào phần network
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image9.png){width="6.5in"
-height="1.3652777777777778in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image9.png"
+style="width:6.5in;height:1.36528in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 **Cấu hình sử dụng Linux Bond:**
 
 Khi bạn có nhiều NIC trên máy chủ, Bond sẽ gộp các NIC này lại để tăng
 tốc độ xử lý cũng như khả năng chịu lỗi.
 
-![A computer screen shot of white text AI-generated content may be
-incorrect.](media/image10.png){width="5.270833333333333in"
-height="4.541666666666667in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image11.png){width="6.5in"
-height="1.457638888888889in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image10.png"
+style="width:5.27083in;height:4.54167in"
+alt="A computer screen shot of white text AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image11.png"
+style="width:6.5in;height:1.45764in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Cấu hình sử dụng OVS Bond:
 
 Để cấu hình sử dụng OVS bond cần cài gói openvswitch-switch
 
-![A screenshot of a computer error message AI-generated content may be
-incorrect.](media/image12.png){width="6.21875in"
-height="2.6145833333333335in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image12.png"
+style="width:6.21875in;height:2.61458in"
+alt="A screenshot of a computer error message AI-generated content may be incorrect." />
 
-*root@pve-1:\~# apt install openvswitch-switch*
+*root@pve-1:~# apt install openvswitch-switch*
 
-![A computer screen with white text AI-generated content may be
-incorrect.](media/image13.png){width="5.166666666666667in"
-height="4.614583333333333in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image14.png){width="6.5in"
-height="1.3993055555555556in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image13.png"
+style="width:5.16667in;height:4.61458in"
+alt="A computer screen with white text AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image14.png"
+style="width:6.5in;height:1.39931in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 3\. Join Cluster cho 3 node Proxmox
 
@@ -73,11 +88,13 @@ Trước tiên cần tạo vlan riêng cho 1 số đường để tránh bị ng
 
 vlan70 dùng cho MGT - vlan71 dùng cho Cluster - vlan72 dùng cho Ceph
 
-![A computer screen shot of a black screen AI-generated content may be
-incorrect.](media/image15.png){width="6.1875in"
-height="7.208333333333333in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image16.png){width="6.5in"
-height="1.8451388888888889in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image15.png"
+style="width:6.1875in;height:7.20833in"
+alt="A computer screen shot of a black screen AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image16.png"
+style="width:6.5in;height:1.84514in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Trước khi join cluster phải đảm bảo network giữa các vlan đã thông
 
@@ -87,92 +104,115 @@ Cluster name: LVS
 
 Cluster Network chọn vlan71
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image17.png){width="6.5in"
-height="1.926388888888889in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image17.png"
+style="width:6.5in;height:1.92639in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Sau khi tạo xong cluster sẽ hiển thị phần **Join Information** copy toàn
 bộ
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image18.png){width="5.208333333333333in"
-height="1.9166666666666667in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image19.png){width="6.5in"
-height="2.0097222222222224in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image18.png"
+style="width:5.20833in;height:1.91667in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image19.png"
+style="width:6.5in;height:2.00972in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Ở node 2 click  **Join Cluster** dán đoạn vừa copy vào phần Cluster
 Network chọn vlan71 và điền pass của Proxmox
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image20.png){width="5.75in"
-height="2.1979166666666665in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image21.png){width="6.5in"
-height="2.942361111111111in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image22.png){width="6.5in"
-height="3.314583333333333in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image20.png"
+style="width:5.75in;height:2.19792in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image21.png"
+style="width:6.5in;height:2.94236in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image22.png"
+style="width:6.5in;height:3.31458in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 4\. CEPH STORAGE
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image23.png){width="6.5in"
-height="3.152083333333333in"}![A screenshot of a computer AI-generated
-content may be
-incorrect.](media/image24.png){width="2.3854166666666665in"
-height="1.15625in"}![A screenshot of a computer AI-generated content may
-be incorrect.](media/image25.png){width="6.5in"
-height="4.605555555555555in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image23.png"
+style="width:6.5in;height:3.15208in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image24.png"
+style="width:2.38542in;height:1.15625in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image25.png"
+style="width:6.5in;height:4.60556in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Chọn vlan72 cho Ceph
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image26.png){width="6.5in"
-height="4.614583333333333in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image26.png"
+style="width:6.5in;height:4.61458in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Tạo Ceph OSD
 
-Tạo Ceph OSD cho 10 node vào \"Ceph - OSD - Create: OSD\"
+Tạo Ceph OSD cho 10 node vào "Ceph - OSD - Create: OSD"
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image27.png){width="6.260416666666667in"
-height="2.8645833333333335in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image27.png"
+style="width:6.26042in;height:2.86458in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Tạo xong OSD cho 10 node sẽ hiển thị như trên hình
 
-![A group of numbers on a white background AI-generated content may be
-incorrect.](media/image28.png){width="6.5in" height="1.75625in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image28.png"
+style="width:6.5in;height:1.75625in"
+alt="A group of numbers on a white background AI-generated content may be incorrect." />
 
-Tạo Pool cho 10 OSD vừa tạo \"Ceph - Pools - Create\"
+Tạo Pool cho 10 OSD vừa tạo "Ceph - Pools - Create"
 
 Mặc định ở đây sẽ là Size 3 - Min 2
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image29.png){width="6.270833333333333in"
-height="2.9583333333333335in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image29.png"
+style="width:6.27083in;height:2.95833in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Sau khi tạo xong sẽ có 1 Storage mới là HDD-STORAGE
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image30.png){width="2.9270833333333335in"
-height="1.65625in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image30.png"
+style="width:2.92708in;height:1.65625in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
 
 Tạo VM trên Proxmox
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image31.png){width="6.020833333333333in"
-height="0.9270833333333334in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image32.png){width="6.5in"
-height="4.595138888888889in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image33.png){width="6.5in"
-height="4.601388888888889in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image34.png){width="6.5in"
-height="4.616666666666666in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image35.png){width="6.5in"
-height="4.613194444444445in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image36.png){width="6.5in"
-height="4.579861111111111in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image37.png){width="6.5in"
-height="4.59375in"}![A screenshot of a computer AI-generated content may
-be incorrect.](media/image38.png){width="6.5in"
-height="4.595138888888889in"}![A screenshot of a computer AI-generated
-content may be incorrect.](media/image39.png){width="6.5in"
-height="4.595138888888889in"}
+<img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image31.png"
+style="width:6.02083in;height:0.92708in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image32.png"
+style="width:6.5in;height:4.59514in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image33.png"
+style="width:6.5in;height:4.60139in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image34.png"
+style="width:6.5in;height:4.61667in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image35.png"
+style="width:6.5in;height:4.61319in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image36.png"
+style="width:6.5in;height:4.57986in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image37.png"
+style="width:6.5in;height:4.59375in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image38.png"
+style="width:6.5in;height:4.59514in"
+alt="A screenshot of a computer AI-generated content may be incorrect." /><img
+src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image39.png"
+style="width:6.5in;height:4.59514in"
+alt="A screenshot of a computer AI-generated content may be incorrect." />
