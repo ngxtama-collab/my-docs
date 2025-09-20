@@ -28,9 +28,9 @@ Nhập User/Pass, tích **Enabled** và set **Expire never**
 
 ## 3. Tạo Datastore
 
-![](images/media/image2.png)  
-![](images/media/image3.png)  
-![](images/media/image4.png)
+![Datastore 1](./images/image2.png)  
+![Datastore 2](./images/image3.png)  
+![Datastore 3](./images/image4.png)
 
 Nhập số bản backup gần nhất cần giữ.  
 Set permission cho User nào được sử dụng Datastore này.
