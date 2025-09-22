@@ -1,13 +1,13 @@
 # Hướng dẫn cấu hình Veeam Backup cho Server vật lý
 
-1. Cài đặt Veeam Backup Server
+## 1. Cài đặt Veeam Backup Server
 
-### Bước 1: Tải phần mềm
+Bước 1: Tải phần mềm
 Download file ISO `VeeamBackup&Replication_12.2.0.334_20240926.iso` từ trang chủ Veeam.
 
 ![Download](media/image1.png)
 
-### Bước 2: Cài đặt
+Bước 2: Cài đặt
 Giải nén file ISO và chạy `Setup.exe`
 
 ![Setup](media/image2.png)
@@ -15,19 +15,19 @@ Giải nén file ISO và chạy `Setup.exe`
 Chọn **Install Veeam Backup & Replication**  
 Tiếp tục nhấn **Next** cho tới bước chọn tài khoản.
 
-### Bước 3: Thiết lập tài khoản dịch vụ
+Bước 3: Thiết lập tài khoản dịch vụ
 Dùng **Local System account** hoặc nhập tài khoản domain.
 
 ![Service Account](media/image3.png)
 
-### Bước 4: Kết nối SQL Server
+Bước 4: Kết nối SQL Server
 - Nếu có SQL Server riêng → nhập thông tin kết nối.  
 - Nếu không, Veeam sẽ tự cài SQL Express.
 
 ![SQL 1](media/image4.png)  
 ![SQL 2](media/image5.png)
 
-### Bước 5: Hoàn tất cài đặt
+Bước 5: Hoàn tất cài đặt
 Nhấn **Install** để bắt đầu.  
 
 ![Install](media/image6.png)
