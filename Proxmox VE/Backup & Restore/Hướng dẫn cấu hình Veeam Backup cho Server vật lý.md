@@ -39,7 +39,7 @@ Veeam Backup là phần mềm sao lưu chuyên dụng cho cả môi trường v�
     trang chủ Veeam.
 
 ![A screen shot of a black screen AI-generated content may be
-incorrect.](media/image1.png){width="6.5in"
+incorrect.](../images/image1.png){width="6.5in"
 height="0.7277777777777777in"}
 
 **Bước 2: Cài đặt**
