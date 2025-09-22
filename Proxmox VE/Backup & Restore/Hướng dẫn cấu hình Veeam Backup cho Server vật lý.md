@@ -1,17 +1,14 @@
 Tài liệu kỹ thuật: Hướng dẫn cấu hình Veeam Backup cho Server vật lý
 
-Phân loại mục:\
-📁 Virtualization\
-  📁 Backup & Restore\
-    📄 Hướng Dẫn Cấu Hình Veeam Backup Cho Server Vật Lý
+Phân loại mục:📁 Virtualization  📁 Backup & Restore    📄 Hướng Dẫn Cấu Hình Veeam Backup Cho Server Vật Lý
 
 🌟 Mục tiêu
 
--   Cài đặt và cấu hình phần mềm Veeam Backup & Replication.
+- Cài đặt và cấu hình phần mềm Veeam Backup & Replication.
 
--   Thiết lập job sao lưu định kỳ cho các server vật lý chạy Windows.
+- Thiết lập job sao lưu định kỳ cho các server vật lý chạy Windows.
 
--   Tăng cường khả năng khôi phục dữ liệu trong trường hợp sự cố.
+- Tăng cường khả năng khôi phục dữ liệu trong trường hợp sự cố.
 
 🧩 Giới thiệu
 
@@ -21,138 +18,138 @@ Veeam Backup là phần mềm sao lưu chuyên dụng cho cả môi trường v�
 
 🛠️ Các thành phần chính của hệ thống
 
--   **Veeam Backup Server:** Điều phối toàn bộ hoạt động backup/restore.
+- Veeam Backup Server: Điều phối toàn bộ hoạt động backup/restore.
 
--   **Backup Proxy:** Xử lý dữ liệu sao lưu (compress, dedup).
+- Backup Proxy: Xử lý dữ liệu sao lưu (compress, dedup).
 
--   **Backup Repository:** Nơi lưu trữ bản sao lưu.
+- Backup Repository: Nơi lưu trữ bản sao lưu.
 
--   **Enterprise Manager:** Quản trị từ trình duyệt web.
+- Enterprise Manager: Quản trị từ trình duyệt web.
 
--   **Backup Search:** Tìm kiếm dữ liệu đã sao lưu.
+- Backup Search: Tìm kiếm dữ liệu đã sao lưu.
 
-**1️⃣ Cài đặt Veeam Backup Server**
+1️⃣ Cài đặt Veeam Backup Server
 
-**Bước 1: Tải phần mềm**
+Bước 1: Tải phần mềm
 
--   Download file ISO VeeamBackup&Replication_12.2.0.334_20240926.iso từ
-    trang chủ Veeam.
+- Download file ISO VeeamBackup&Replication_12.2.0.334_20240926.iso từ
+  trang chủ Veeam.
 
 ![A screen shot of a black screen AI-generated content may be
-incorrect.](../images/media/1.2/img1.png){width="6.5in"
+incorrect.](media/image1.png){width="6.5in"
 height="0.7277777777777777in"}
 
-**Bước 2: Cài đặt**
+Bước 2: Cài đặt
 
--   Giải nén file ISO và chạy Setup.exe
+- Giải nén file ISO và chạy Setup.exe
 
 ![A screenshot of a computer program AI-generated content may be
-incorrect.](../images/media/1.2/img2.png){width="6.5in"
+incorrect.](media/image2.png){width="6.5in"
 height="3.151388888888889in"}
 
--   Chọn **Install Veeam Backup & Replication**
+- Chọn Install Veeam Backup & Replication
 
--   Tiếp tục nhấn **Next** cho tới bước chọn tài khoản
+- Tiếp tục nhấn Next cho tới bước chọn tài khoản
 
-**Bước 3: Thiết lập tài khoản dịch vụ**
+Bước 3: Thiết lập tài khoản dịch vụ
 
--   Dùng **Local System account** hoặc nhập tài khoản domain.
-
-![A screenshot of a computer Description automatically
-generated](../images/media/1.2/img3.png){width="6.5in" height="5.057638888888889in"}
-
-**Bước 4: Kết nối SQL Server**
-
--   Nếu có SQL Server riêng → nhập thông tin kết nối.
-
--   Nếu không, Veeam sẽ cài SQL Express mặc định.
+- Dùng Local System account hoặc nhập tài khoản domain.
 
 ![A screenshot of a computer Description automatically
-generated](../images/media/1.2/img4.png){width="6.5in"
+generated](media/image3.png)
+
+Bước 4: Kết nối SQL Server
+
+- Nếu có SQL Server riêng → nhập thông tin kết nối.
+
+- Nếu không, Veeam sẽ cài SQL Express mặc định.
+
+![A screenshot of a computer Description automatically
+generated](media/image4.png){width="6.5in"
 height="5.057638888888889in"}![A screenshot of a computer Description
-automatically generated](../images/media/1.2/img5.png){width="6.5in"
+automatically generated](media/image5.png){width="6.5in"
 height="5.057638888888889in"}
 
-**Bước 5: Cài đặt hoàn tất**
+Bước 5: Cài đặt hoàn tất
 
--   Nhấn **Install** để bắt đầu cài
+- Nhấn Install để bắt đầu cài
 
 ![A screenshot of a computer Description automatically
-generated](../images/media/1.2/img6.png){width="6.5in" height="5.057638888888889in"}
+generated](media/image6.png)
 
--   Chọn **Finish** sau khi cài đặt xong
+- Chọn Finish sau khi cài đặt xong
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](../images/media/1.2/img7.png){width="6.5in"
+incorrect.](media/image7.png){width="6.5in"
 height="5.057638888888889in"}
 
--   Khởi động ứng dụng và nhấn **Connect**
+- Khởi động ứng dụng và nhấn Connect
 
-**2️⃣ Cấu hình Backup Repository**
+2️⃣ Cấu hình Backup Repository
 
--   Truy cập tab **Backup Infrastructure** → Add Backup Repository
+- Truy cập tab Backup Infrastructure → Add Backup Repository
 
--   Chọn loại repo: Windows, Linux, NAS\...
+- Chọn loại repo: Windows, Linux, NAS\...
 
--   Chỉ định đường dẫn lưu trữ (ví dụ: D:\\VeeamBackup) và xác nhận
+- Chỉ định đường dẫn lưu trữ (ví dụ: D:\VeeamBackup) và xác nhận
 
 ![A screenshot of a computer Description automatically
-generated](../images/media/1.2/img8.png){width="6.5in" height="4.189583333333333in"}
+generated](media/image8.png)
 
-**3️⃣ Tạo Job Backup Cho Server**
+3️⃣ Tạo Job Backup Cho Server
 
--   Vào **Home** → **Jobs** → **Backup Job**
+- Vào Home → Jobs → Backup Job
 
--   Chọn **Windows Computer** → đặt tên job
+- Chọn Windows Computer → đặt tên job
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](../images/media/1.2/img9.png){width="6.5in"
+incorrect.](media/image9.png){width="6.5in"
 height="4.916666666666667in"}
 
--   Thêm server vật lý cần sao lưu
+- Thêm server vật lý cần sao lưu
 
--   Chọn chế độ backup: Entire machine / Volume / File-level
+- Chọn chế độ backup: Entire machine / Volume / File-level
 
--   Cấu hình lịch trình chạy job (daily, weekly\...)
+- Cấu hình lịch trình chạy job (daily, weekly\...)
 
--   Chọn Repository đã tạo
+- Chọn Repository đã tạo
 
--   Xác nhận và chạy thử job lần đầu
+- Xác nhận và chạy thử job lần đầu
 
 ![A screenshot of a computer AI-generated content may be
-incorrect.](../images/media/1.2/img10.png){width="6.5in"
+incorrect.](media/image10.png){width="6.5in"
 height="1.645138888888889in"}
 
-**4️⃣ Phục hồi Server (Restore)**
+4️⃣ Phục hồi Server (Restore)
 
--   Vào tab **Home** → **Restore**
+- Vào tab Home → Restore
 
--   Chọn dạng phục hồi:
+- Chọn dạng phục hồi:
 
-    -   Entire machine
+  - Entire machine
 
-    -   Volume
+  - Volume
 
-    -   File/folder
+  - File/folder
 
--   Làm theo wizard để chọn thời điểm phục hồi, đích đến\...
+- Làm theo wizard để chọn thời điểm phục hồi, đích đến\...
 
 ![A screenshot of a desktop Description automatically
-generated](../images/media/1.2/img11.png){width="6.5in"
+generated](media/image11.png){width="6.5in"
 height="4.559027777777778in"}
 
-**🔐 Lưu ý bảo mật**
+🔐 Lưu ý bảo mật
 
--   Phân quyền người dùng truy cập Veeam rõ ràng
+- Phân quyền người dùng truy cập Veeam rõ ràng
 
--   Đặt mật khẩu cho backup repository (nếu dùng ổ NAS)
+- Đặt mật khẩu cho backup repository (nếu dùng ổ NAS)
 
--   Luôn backup Veeam configuration định kỳ
+- Luôn backup Veeam configuration định kỳ
 
-**✅ Kiểm tra sau triển khai**
+✅ Kiểm tra sau triển khai
 
--   Job backup hoàn tất không lỗi
+- Job backup hoàn tất không lỗi
 
--   Có thể khôi phục file bất kỳ từ bản backup
+- Có thể khôi phục file bất kỳ từ bản backup
 
--   Kiểm tra dung lượng backup và retention phù hợp
+- Kiểm tra dung lượng backup và retention phù hợp
