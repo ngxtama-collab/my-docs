@@ -1,6 +1,6 @@
 # Hướng dẫn cấu hình Veeam Backup cho Server vật lý
 
-## 1. Cài đặt Veeam Backup Server
+1. Cài đặt Veeam Backup Server
 
 ### Bước 1: Tải phần mềm
 Download file ISO `VeeamBackup&Replication_12.2.0.334_20240926.iso` từ trang chủ Veeam.
