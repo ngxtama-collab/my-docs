@@ -1,7 +1,3 @@
-Tài liệu kỹ thuật: Hướng dẫn cấu hình Veeam Backup cho Server vật lý
-
-Phân loại mục:📁 Virtualization  📁 Backup & Restore    📄 Hướng Dẫn Cấu Hình Veeam Backup Cho Server Vật Lý
-
 🌟 Mục tiêu
 
 - Cài đặt và cấu hình phần mềm Veeam Backup & Replication.
