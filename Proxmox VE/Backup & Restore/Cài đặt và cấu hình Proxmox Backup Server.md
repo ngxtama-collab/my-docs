@@ -1,6 +1,6 @@
 # Proxmox Backup Server
 
-## 1. Setup OS
+
 
 a. Cài trên 1 server từ file ISO  
 <https://www.proxmox.com/en/downloads>
