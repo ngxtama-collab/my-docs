@@ -1,11 +1,11 @@
-**Tài liệu kỹ thuật: Hướng dẫn cấu hình Veeam Backup cho Server vật lý**
+Tài liệu kỹ thuật: Hướng dẫn cấu hình Veeam Backup cho Server vật lý
 
-**Phân loại mục:**\
+Phân loại mục:\
 📁 Virtualization\
   📁 Backup & Restore\
     📄 Hướng Dẫn Cấu Hình Veeam Backup Cho Server Vật Lý
 
-**🌟 Mục tiêu**
+🌟 Mục tiêu
 
 -   Cài đặt và cấu hình phần mềm Veeam Backup & Replication.
 
@@ -13,13 +13,13 @@
 
 -   Tăng cường khả năng khôi phục dữ liệu trong trường hợp sự cố.
 
-**🧩 Giới thiệu**
+🧩 Giới thiệu
 
 Veeam Backup là phần mềm sao lưu chuyên dụng cho cả môi trường vật lý và
 ảo hóa như VMware, Hyper-V, Proxmox. Hỗ trợ backup tăng dần
 (incremental), khôi phục linh hoạt, quản lý tập trung.
 
-**🛠️ Các thành phần chính của hệ thống**
+🛠️ Các thành phần chính của hệ thống
 
 -   **Veeam Backup Server:** Điều phối toàn bộ hoạt động backup/restore.
 
