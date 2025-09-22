@@ -1,151 +1,96 @@
-🌟 Mục tiêu
+# Hướng dẫn cấu hình Veeam Backup cho Server vật lý
 
-- Cài đặt và cấu hình phần mềm Veeam Backup & Replication.
+## 1. Cài đặt Veeam Backup Server
 
-- Thiết lập job sao lưu định kỳ cho các server vật lý chạy Windows.
+### Bước 1: Tải phần mềm
+Download file ISO `VeeamBackup&Replication_12.2.0.334_20240926.iso` từ trang chủ Veeam.
 
-- Tăng cường khả năng khôi phục dữ liệu trong trường hợp sự cố.
+![Download](media/image1.png)
 
-🧩 Giới thiệu
+### Bước 2: Cài đặt
+Giải nén file ISO và chạy `Setup.exe`
 
-Veeam Backup là phần mềm sao lưu chuyên dụng cho cả môi trường vật lý và
-ảo hóa như VMware, Hyper-V, Proxmox. Hỗ trợ backup tăng dần
-(incremental), khôi phục linh hoạt, quản lý tập trung.
+![Setup](media/image2.png)
 
-🛠️ Các thành phần chính của hệ thống
+Chọn **Install Veeam Backup & Replication**  
+Tiếp tục nhấn **Next** cho tới bước chọn tài khoản.
 
-- Veeam Backup Server: Điều phối toàn bộ hoạt động backup/restore.
+### Bước 3: Thiết lập tài khoản dịch vụ
+Dùng **Local System account** hoặc nhập tài khoản domain.
 
-- Backup Proxy: Xử lý dữ liệu sao lưu (compress, dedup).
+![Service Account](media/image3.png)
 
-- Backup Repository: Nơi lưu trữ bản sao lưu.
+### Bước 4: Kết nối SQL Server
+- Nếu có SQL Server riêng → nhập thông tin kết nối.  
+- Nếu không, Veeam sẽ tự cài SQL Express.
 
-- Enterprise Manager: Quản trị từ trình duyệt web.
+![SQL 1](media/image4.png)  
+![SQL 2](media/image5.png)
 
-- Backup Search: Tìm kiếm dữ liệu đã sao lưu.
+### Bước 5: Hoàn tất cài đặt
+Nhấn **Install** để bắt đầu.  
 
-1️⃣ Cài đặt Veeam Backup Server
+![Install](media/image6.png)
 
-Bước 1: Tải phần mềm
+Chọn **Finish** sau khi hoàn tất.  
 
-- Download file ISO VeeamBackup&Replication_12.2.0.334_20240926.iso từ
-  trang chủ Veeam.
+![Finish](media/image7.png)
 
-![A screen shot of a black screen AI-generated content may be
-incorrect.](media/image1.png){width="6.5in"
-height="0.7277777777777777in"}
+Khởi động ứng dụng và nhấn **Connect**.
 
-Bước 2: Cài đặt
+---
 
-- Giải nén file ISO và chạy Setup.exe
+## 2. Cấu hình Backup Repository
 
-![A screenshot of a computer program AI-generated content may be
-incorrect.](media/image2.png){width="6.5in"
-height="3.151388888888889in"}
+Vào **Backup Infrastructure** → **Add Backup Repository**  
+Chọn loại repo: Windows, Linux, NAS…  
+Chỉ định đường dẫn lưu trữ (ví dụ: `D:\VeeamBackup`) và xác nhận.
 
-- Chọn Install Veeam Backup & Replication
+![Repository](media/image8.png)
 
-- Tiếp tục nhấn Next cho tới bước chọn tài khoản
+---
 
-Bước 3: Thiết lập tài khoản dịch vụ
+## 3. Tạo Job Backup cho Server
 
-- Dùng Local System account hoặc nhập tài khoản domain.
+Vào **Home** → **Jobs** → **Backup Job**  
+Chọn **Windows Computer** → đặt tên job.
 
-![A screenshot of a computer Description automatically
-generated](media/image3.png)
+![New Job](media/image9.png)
 
-Bước 4: Kết nối SQL Server
+- Thêm server vật lý cần sao lưu.  
+- Chọn chế độ backup: Entire machine / Volume / File-level.  
+- Cấu hình lịch chạy job (daily, weekly…).  
+- Chọn Repository đã tạo.  
+- Xác nhận và chạy thử lần đầu.
 
-- Nếu có SQL Server riêng → nhập thông tin kết nối.
+![Running Job](media/image10.png)
 
-- Nếu không, Veeam sẽ cài SQL Express mặc định.
+---
 
-![A screenshot of a computer Description automatically
-generated](media/image4.png){width="6.5in"
-height="5.057638888888889in"}![A screenshot of a computer Description
-automatically generated](media/image5.png){width="6.5in"
-height="5.057638888888889in"}
+## 4. Phục hồi Server (Restore)
 
-Bước 5: Cài đặt hoàn tất
+Vào **Home** → **Restore**  
+Chọn kiểu phục hồi:  
+- Entire machine  
+- Volume  
+- File/folder  
 
-- Nhấn Install để bắt đầu cài
+Làm theo wizard để chọn thời điểm phục hồi và đích đến.
 
-![A screenshot of a computer Description automatically
-generated](media/image6.png)
+![Restore](media/image11.png)
 
-- Chọn Finish sau khi cài đặt xong
+---
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image7.png){width="6.5in"
-height="5.057638888888889in"}
+## 5. Lưu ý bảo mật
 
-- Khởi động ứng dụng và nhấn Connect
+- Phân quyền người dùng truy cập Veeam rõ ràng.  
+- Đặt mật khẩu cho backup repository (nếu dùng NAS).  
+- Luôn backup Veeam configuration định kỳ.
 
-2️⃣ Cấu hình Backup Repository
+---
 
-- Truy cập tab Backup Infrastructure → Add Backup Repository
+## 6. Kiểm tra sau triển khai
 
-- Chọn loại repo: Windows, Linux, NAS\...
-
-- Chỉ định đường dẫn lưu trữ (ví dụ: D:\VeeamBackup) và xác nhận
-
-![A screenshot of a computer Description automatically
-generated](media/image8.png)
-
-3️⃣ Tạo Job Backup Cho Server
-
-- Vào Home → Jobs → Backup Job
-
-- Chọn Windows Computer → đặt tên job
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image9.png){width="6.5in"
-height="4.916666666666667in"}
-
-- Thêm server vật lý cần sao lưu
-
-- Chọn chế độ backup: Entire machine / Volume / File-level
-
-- Cấu hình lịch trình chạy job (daily, weekly\...)
-
-- Chọn Repository đã tạo
-
-- Xác nhận và chạy thử job lần đầu
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](media/image10.png){width="6.5in"
-height="1.645138888888889in"}
-
-4️⃣ Phục hồi Server (Restore)
-
-- Vào tab Home → Restore
-
-- Chọn dạng phục hồi:
-
-  - Entire machine
-
-  - Volume
-
-  - File/folder
-
-- Làm theo wizard để chọn thời điểm phục hồi, đích đến\...
-
-![A screenshot of a desktop Description automatically
-generated](media/image11.png){width="6.5in"
-height="4.559027777777778in"}
-
-🔐 Lưu ý bảo mật
-
-- Phân quyền người dùng truy cập Veeam rõ ràng
-
-- Đặt mật khẩu cho backup repository (nếu dùng ổ NAS)
-
-- Luôn backup Veeam configuration định kỳ
-
-✅ Kiểm tra sau triển khai
-
-- Job backup hoàn tất không lỗi
-
-- Có thể khôi phục file bất kỳ từ bản backup
-
-- Kiểm tra dung lượng backup và retention phù hợp
+- Job backup hoàn tất không lỗi.  
+- Có thể khôi phục file bất kỳ từ bản backup.  
+- Kiểm tra dung lượng backup và retention phù hợp.
