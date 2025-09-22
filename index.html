@@ -37,57 +37,49 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
 
-    /* Sidebar style */
+    /* Sidebar tổng */
     .sidebar {
-      background: #007bff;
-      color: #fff;
+      background: #0f1c2e !important;  /* navy */
+      color: #ffffff !important;
+      font-family: 'Roboto', 'Open Sans', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.3px; /* tạo cảm giác sang */
     }
+
+    /* Tiêu đề trong sidebar */
+    .sidebar .app-name {
+      color: #ffffff !important;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    /* Link trong sidebar */
     .sidebar ul li a {
-      color: #fff !important;
+      color: #ffffff !important;
+      padding: 6px 12px;
+      border-radius: 6px;
+      display: block;
+      transition: all 0.2s ease;
     }
+
+    /* Hover link */
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #1e90ff !important;
+    }
+
+    /* Link đang active */
     .sidebar ul li.active > a {
-      background: rgba(255,255,255,0.2);
-      border-radius: 8px;
-    }
-
-    /* Style cho nút Download */
-    .download-btn {
-      display: inline-block;
-      padding: 10px 18px;
-      background: linear-gradient(45deg, #ff6b6b, #f06595, #845ef7);
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      background-size: 200% 200%;
-      animation: gradientMove 5s ease infinite;
-    }
-    .download-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    }
-    .download-container {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 999;
-    }
-
-    /* Gradient animation */
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      background: #1e90ff !important;
+      color: #ffffff !important;
+      font-weight: 700;
     }
 
     /* Responsive cho mobile */
     @media (max-width: 600px) {
-      .download-btn {
-        padding: 6px 12px;
-        font-size: 14px;
-      }
       #app {
         margin: 10px;
         padding: 15px;
