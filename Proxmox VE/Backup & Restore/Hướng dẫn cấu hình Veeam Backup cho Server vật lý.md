@@ -1,76 +1,158 @@
-# Proxmox Backup Server
+**Tài liệu kỹ thuật: Hướng dẫn cấu hình Veeam Backup cho Server vật lý**
 
-## 1. Setup OS
+**Phân loại mục:**\
+📁 Virtualization\
+  📁 Backup & Restore\
+    📄 Hướng Dẫn Cấu Hình Veeam Backup Cho Server Vật Lý
 
-a. Cai tren 1 server tu file ISO  
-<https://www.proxmox.com/en/downloads>
+**🌟 Mục tiêu**
 
-b. Cai tren Proxmox VE server
+-   Cài đặt và cấu hình phần mềm Veeam Backup & Replication.
 
-Them dong sau vao file `/etc/apt/sources.list`:
+-   Thiết lập job sao lưu định kỳ cho các server vật lý chạy Windows.
 
-```
-deb http://download.proxmox.com/debian/pbs bullseye pbs-no-subscription
-```
+-   Tăng cường khả năng khôi phục dữ liệu trong trường hợp sự cố.
 
-Cai dat:
+**🧩 Giới thiệu**
 
-```
-apt update
-apt install proxmox-backup-server
-```
+Veeam Backup là phần mềm sao lưu chuyên dụng cho cả môi trường vật lý và
+ảo hóa như VMware, Hyper-V, Proxmox. Hỗ trợ backup tăng dần
+(incremental), khôi phục linh hoạt, quản lý tập trung.
 
-Sau khi cai dat co the truy cap bang trinh duyet:  
-`https://<IP>:8007`
+**🛠️ Các thành phần chính của hệ thống**
 
----
+-   **Veeam Backup Server:** Điều phối toàn bộ hoạt động backup/restore.
 
-## 2. Tao User
+-   **Backup Proxy:** Xử lý dữ liệu sao lưu (compress, dedup).
 
-![User](../images/media/image1.png)
+-   **Backup Repository:** Nơi lưu trữ bản sao lưu.
 
-Nhap User/Pass  
-Tich **Enabled** va set **Expire never**
+-   **Enterprise Manager:** Quản trị từ trình duyệt web.
 
----
+-   **Backup Search:** Tìm kiếm dữ liệu đã sao lưu.
 
-## 3. Tao Datastore
+**1️⃣ Cài đặt Veeam Backup Server**
 
-![Datastore 1](../images/media/image2.png)  
-![Datastore 2](../images/media/image3.png)  
-![Datastore 3](../images/media/image4.png)
+**Bước 1: Tải phần mềm**
 
-Nhap so ban backup gan nhat can giu.  
-Set permission cho User nao duoc su dung Datastore nay
+-   Download file ISO VeeamBackup&Replication_12.2.0.334_20240926.iso từ
+    trang chủ Veeam.
 
-![Permission](../images/media/image5.png)
+![A screen shot of a black screen AI-generated content may be
+incorrect.](media/image1.png){width="6.5in"
+height="0.7277777777777777in"}
 
----
+**Bước 2: Cài đặt**
 
-## 4. Ket noi den PVE server
+-   Giải nén file ISO và chạy Setup.exe
 
-Cau hinh network thong tu PVE server va PBS.  
+![A screenshot of a computer program AI-generated content may be
+incorrect.](media/image2.png){width="6.5in"
+height="3.151388888888889in"}
 
-Tren PBS chay lenh:
+-   Chọn **Install Veeam Backup & Replication**
 
-```
-proxmox-backup-manager cert info | grep Fingerprint
-```
+-   Tiếp tục nhấn **Next** cho tới bước chọn tài khoản
 
-![Fingerprint](../images/media/image6.png)
+**Bước 3: Thiết lập tài khoản dịch vụ**
 
-Luu thong tin **Fingerprint** de add vao PVE.  
+-   Dùng **Local System account** hoặc nhập tài khoản domain.
 
-Vao **Cluster PVE**:
+![A screenshot of a computer Description automatically
+generated](media/image3.png){width="6.5in" height="5.057638888888889in"}
 
-![Cluster 1](../images/media/image7.png)  
-![Cluster 2](../images/media/image8.png)  
-![Cluster 3](../images/media/image9.png)  
-![Cluster 4](../images/media/image10.png)
+**Bước 4: Kết nối SQL Server**
 
----
+-   Nếu có SQL Server riêng → nhập thông tin kết nối.
 
-## 5. Add Backup Job
+-   Nếu không, Veeam sẽ cài SQL Express mặc định.
 
-![Backup Job 1](../images/media/image11.png)  
-![Backup Job 2](../images/media/image12.png)
+![A screenshot of a computer Description automatically
+generated](media/image4.png){width="6.5in"
+height="5.057638888888889in"}![A screenshot of a computer Description
+automatically generated](media/image5.png){width="6.5in"
+height="5.057638888888889in"}
+
+**Bước 5: Cài đặt hoàn tất**
+
+-   Nhấn **Install** để bắt đầu cài
+
+![A screenshot of a computer Description automatically
+generated](media/image6.png){width="6.5in" height="5.057638888888889in"}
+
+-   Chọn **Finish** sau khi cài đặt xong
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](media/image7.png){width="6.5in"
+height="5.057638888888889in"}
+
+-   Khởi động ứng dụng và nhấn **Connect**
+
+**2️⃣ Cấu hình Backup Repository**
+
+-   Truy cập tab **Backup Infrastructure** → Add Backup Repository
+
+-   Chọn loại repo: Windows, Linux, NAS\...
+
+-   Chỉ định đường dẫn lưu trữ (ví dụ: D:\\VeeamBackup) và xác nhận
+
+![A screenshot of a computer Description automatically
+generated](media/image8.png){width="6.5in" height="4.189583333333333in"}
+
+**3️⃣ Tạo Job Backup Cho Server**
+
+-   Vào **Home** → **Jobs** → **Backup Job**
+
+-   Chọn **Windows Computer** → đặt tên job
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](media/image9.png){width="6.5in"
+height="4.916666666666667in"}
+
+-   Thêm server vật lý cần sao lưu
+
+-   Chọn chế độ backup: Entire machine / Volume / File-level
+
+-   Cấu hình lịch trình chạy job (daily, weekly\...)
+
+-   Chọn Repository đã tạo
+
+-   Xác nhận và chạy thử job lần đầu
+
+![A screenshot of a computer AI-generated content may be
+incorrect.](media/image10.png){width="6.5in"
+height="1.645138888888889in"}
+
+**4️⃣ Phục hồi Server (Restore)**
+
+-   Vào tab **Home** → **Restore**
+
+-   Chọn dạng phục hồi:
+
+    -   Entire machine
+
+    -   Volume
+
+    -   File/folder
+
+-   Làm theo wizard để chọn thời điểm phục hồi, đích đến\...
+
+![A screenshot of a desktop Description automatically
+generated](media/image11.png){width="6.5in"
+height="4.559027777777778in"}
+
+**🔐 Lưu ý bảo mật**
+
+-   Phân quyền người dùng truy cập Veeam rõ ràng
+
+-   Đặt mật khẩu cho backup repository (nếu dùng ổ NAS)
+
+-   Luôn backup Veeam configuration định kỳ
+
+**✅ Kiểm tra sau triển khai**
+
+-   Job backup hoàn tất không lỗi
+
+-   Có thể khôi phục file bất kỳ từ bản backup
+
+-   Kiểm tra dung lượng backup và retention phù hợp
