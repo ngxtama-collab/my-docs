@@ -1,43 +1,111 @@
-body {
-  font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
-  color: #f5f5f5;  /* chữ sáng hơn */
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tài liệu kỹ thuật</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Container Docsify */
-#app {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  color: #eaeaea; /* chữ trong khung sáng */
-}
+  <!-- SEO -->
+  <meta name="description" content="Tài liệu kỹ thuật Proxmox VE - Backup, Restore, Setup, Troubleshoot">
+  <meta property="og:title" content="Tài liệu kỹ thuật">
+  <meta property="og:description" content="Docsify site cho Proxmox VE">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
 
-/* Sidebar style */
-.sidebar {
-  background: #1c1c1c;
-  color: #fff;
-}
-.sidebar ul li a {
-  color: #ddd !important;
-}
-.sidebar ul li.active > a {
-  background: rgba(255,255,255,0.1);
-  border-radius: 8px;
-  color: #fff !important;
-}
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-/* Tiêu đề */
-h1, h2, h3, h4 {
-  font-weight: 600;
-  color: #ffffff; /* trắng rõ */
-}
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-/* Code block */
-code {
-  background: #2d2d2d;
-  color: #ffcc66;
-  padding: 2px 6px;
-  border-radius: 6px;
-}
+  <!-- Docsify theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+      color: #f5f5f5; /* Chữ sáng rõ */
+    }
+
+    /* Container Docsify */
+    #app {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      color: #eaeaea;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #1c1c1c;
+      color: #fff;
+    }
+    .sidebar ul li a {
+      color: #ddd !important;
+    }
+    .sidebar ul li.active > a {
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #fff !important;
+    }
+
+    /* Tiêu đề */
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    /* Link */
+    a {
+      color: #4dabf7;
+    }
+    a:hover {
+      color: #82cfff;
+    }
+
+    /* Code block */
+    code {
+      background: #2d2d2d;
+      color: #ffcc66;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    pre {
+      background: #2d2d2d !important;
+      color: #eaeaea !important;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Docsify App -->
+  <div id="app">Loading...</div>
+
+  <!-- Cấu hình Docsify -->
+  <script>
+    window.$docsify = {
+      name: '📘 Tài liệu kỹ thuật',
+      repo: 'https://github.com/ngxtama-collab/my-docs',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '🔍 Tìm kiếm...',
+        noData: '❌ Không có kết quả'
+      }
+    }
+  </script>
+
+  <!-- Docsify core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- Plugin search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+</body>
+</html>
