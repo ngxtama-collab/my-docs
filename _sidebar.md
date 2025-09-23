@@ -12,7 +12,7 @@
     - [Force NTP SYNC trên Proxmox bằng Chrony](Proxmox%20VE/Setup%20Proxmox/Force%20NTP%20SYNC%20trên%20Proxmox%20bằng%20Chrony.md)
     - [HA Proxmox Cluster](Proxmox%20VE/Setup%20Proxmox/HA%20Proxmox%20Cluster.md)
     - [Hướng dẫn import disk vmdk to Proxmox](Proxmox%20VE/Setup%20Proxmox/Hướng%20dẫn%20import%20disk%20vmdk%20to%20Proxmox.md)
-    - [Migrate VM giữa hai host Proxmox không cùng cluster](Proxmox%20VE/Setup%20Proxmox/Migrate%20VM%20giữa%20hai%20host%20Proxmox%20không%20cùng%20cluster.md)
+    - [Migrate VM giữa hai host Proxmox không cùng cluster](Proxmox%20VE/Setup%20Proxmox/Migrate-VM-giua-hai-host-Proxmox-không-Cluster.md)
     - [Tạo API Token để kết nối Proxmox](Proxmox%20VE/Setup%20Proxmox/Tạo%20API%20Token%20để%20kết%20nối%20Proxmox.md)
 
   - **Troubleshoot Proxmox**
