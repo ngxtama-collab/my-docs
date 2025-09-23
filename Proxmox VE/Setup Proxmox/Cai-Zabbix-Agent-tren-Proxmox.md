@@ -1,105 +1,103 @@
-**Hướng dẫn cài Zabbix Agent trên Proxmox**
+# Hướng dẫn cài Zabbix Agent trên Proxmox
 
-1.  **Cài đặt Zabbix-agnet.**
+## 1. Cài đặt Zabbix Agent
 
-Cài sẵn proxmox trên node
+Cài sẵn Proxmox trên node.  
 
-Bắt đầu bằng cách cập nhật danh sách gói trên máy chủ từ xa: *sudo apt
-update*
+Bắt đầu bằng cách cập nhật danh sách gói trên máy chủ từ xa:
 
-Sau đó tải xuống tệp Debian của kho lưu trữ Zabbix bằng lệnh như sau :
-*wget* [*https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb*](https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb)
+```bash
+sudo apt update
+```
 
-Sau đó kích hoạt nó bằng lệnh dpkg như sau: *sudo dpkg -i
-zabbix-release_5.0-1+focal_all.deb*
+Sau đó tải xuống tệp Debian của kho lưu trữ Zabbix:
 
-<img
-src="../images/2.2/1.png"
-style="width:6.23958in;height:1.48958in"
-alt="A screen shot of a computer program AI-generated content may be incorrect." />
+```bash
+wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+focal_all.deb
+```
 
-Khi đã có kho lưu trữ, hãy cài đặt tác nhân Zabbix: *sudo apt install
-zabbix-agent*
+Kích hoạt nó bằng lệnh dpkg:
 
-<img
-src="../images/2.2/2.png"
-style="width:6.5in;height:3.37153in"
-alt="A screenshot of a computer program AI-generated content may be incorrect." />
+```bash
+sudo dpkg -i zabbix-release_5.0-1+focal_all.deb
+```
 
-Khi quá trình cài đặt hoàn tất, hãy kiểm tra xem daemon Zabbix-agent có
-đang chạy hay không như sau: *sudo systemctl status zabbix-agent*
+![Repo](../images/2.2/1.png)
 
-<img
-src="../images/2.2/3.png"
-style="width:6.5in;height:2.56389in"
-alt="A computer screen with white text AI-generated content may be incorrect." />
+Khi đã có kho lưu trữ, hãy cài đặt tác nhân Zabbix:
 
-Thay đổi đối với tệp cấu hình tại /etc/zabbix/zabbix_agentd.conf: *sudo
-vim /etc/zabbix/zabbix_agentd.conf*
+```bash
+sudo apt install zabbix-agent
+```
 
-<img
-src="../images/2.2/4.png"
-style="width:6.5in;height:0.43819in" />
+![Install Agent](../images/2.2/2.png)
 
-Thay đổi cấu hình trong file ở một số chỗ như sau:
+Khi quá trình cài đặt hoàn tất, hãy kiểm tra daemon:
 
-<img
-src="../images/2.2/5.png"
-style="width:3.35417in;height:0.72917in"
-alt="A black background with white numbers AI-generated content may be incorrect." />
+```bash
+sudo systemctl status zabbix-agent
+```
 
-Lưu các thay đổi và thoát khỏi tệp. Sau đó, khởi động lại dịch vụ đại lý
-Zabbix để các thay đổi được thực hiện: *sudo systemctl restart
-zabbix-agent*
+![Agent Status](../images/2.2/3.png)
 
-*Cài tool lm-sensors:*
+Chỉnh sửa file cấu hình `/etc/zabbix/zabbix_agentd.conf`:
 
-<img
-src="../images/2.2/6.png"
-style="width:6.5in;height:2.42361in"
-alt="A screen shot of a computer AI-generated content may be incorrect." /><img
-src="../images/2.2/7.png"
-style="width:6.5in;height:1.24167in"
-alt="A black screen with white text AI-generated content may be incorrect." /><img
-src="../images/2.2/8.png"
-style="width:5.41667in;height:6.35417in"
-alt="A screenshot of a computer program AI-generated content may be incorrect." />
+```bash
+sudo vim /etc/zabbix/zabbix_agentd.conf
+```
 
-***2.*** **Add host Zabbix server**
+![Config Path](../images/2.2/4.png)  
+![Config Example](../images/2.2/5.png)
 
-Truy cập địa chỉ ip Zabbix server qua tài khoản Admin/zabbix.
+Lưu thay đổi và restart dịch vụ:
 
-<img
-src="../images/2.2/9.png"
-style="width:6.5in;height:2.76736in"
-alt="A screenshot of a computer AI-generated content may be incorrect." /><img
-src="../images/2.2/10.png"
-style="width:6.5in;height:6.02083in"
-alt="A screenshot of a computer program AI-generated content may be incorrect." /><img
-src="../images/2.2/11.png"
-style="width:6.5in;height:3.125in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />
+```bash
+sudo systemctl restart zabbix-agent
+```
 
-3\. Check nhiệt độ CPU
+### Cài tool lm-sensors
 
-Tạo file userparameter_cputemp.conf theo đường dẫn sau
-/etc/zabbix/zabbix_agentd.d/
+```bash
+sudo apt install lm-sensors
+```
 
-Copy đoạn code sau vào file vừa tạo được:
+![Lm Sensors 1](../images/2.2/6.png)  
+![Lm Sensors 2](../images/2.2/7.png)  
+![Lm Sensors 3](../images/2.2/8.png)
 
-*UserParameter=basicCPUTemp.min,sensors \| grep Core \| awk -F'\[:+°\]'
-'{if(min==""){min=\$3}; if(\$3\<min) {min=\$3};} END {print min}'*  
-*UserParameter=basicCPUTemp.max,sensors \| grep Core \| awk -F'\[:+°\]'
-'{if(max==""){max=\$3}; if(max\<\$3) {max=\$3};} END {print max}'*  
-*UserParameter=basicCPUTemp.avg,sensors \| grep Core \| awk -F'\[:+°\]'
-'{avg+=\$3}END{print avg/NR}'*
+---
 
-*sudo systemctl restart zabbix-agent*
+## 2. Add host Zabbix server
 
-<img
-src="../images/2.2/12.png"
-style="width:5.9375in;height:4.23958in"
-alt="A screenshot of a web page AI-generated content may be incorrect." /><img
-src="../images/2.2/13.png"
-style="width:6.5in;height:1.98472in"
-alt="A graph with lines and numbers AI-generated content may be incorrect." />
+Truy cập địa chỉ IP Zabbix server với tài khoản `Admin/zabbix`.
+
+![Zabbix Login](../images/2.2/9.png)  
+![Zabbix Add Host](../images/2.2/10.png)  
+![Zabbix Confirm](../images/2.2/11.png)
+
+---
+
+## 3. Check nhiệt độ CPU
+
+Tạo file `userparameter_cputemp.conf` tại `/etc/zabbix/zabbix_agentd.d/`:
+
+```bash
+sudo vim /etc/zabbix/zabbix_agentd.d/userparameter_cputemp.conf
+```
+
+Thêm nội dung sau:
+
+```bash
+UserParameter=basicCPUTemp.min,sensors | grep Core | awk -F'[:+°]' '{if(min==""){min=$3}; if($3<min) {min=$3};} END {print min}'
+UserParameter=basicCPUTemp.max,sensors | grep Core | awk -F'[:+°]' '{if(max==""){max=$3}; if(max<$3) {max=$3};} END {print max}'
+UserParameter=basicCPUTemp.avg,sensors | grep Core | awk -F'[:+°]' '{avg+=$3}END{print avg/NR}'
+```
+
+Restart agent:
+
+```bash
+sudo systemctl restart zabbix-agent
+```
+
+![CPU Temp Graph 1](../images/2.2/12.png)  
+![CPU Temp Graph 2](../images/2.2/13.png)
