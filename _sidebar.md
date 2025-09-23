@@ -6,7 +6,6 @@
   - **Setup Proxmox**
     - [Add RBD Ceph Storage](Proxmox%20VE/Setup%20Proxmox/Add%20RBD%20Ceph%20Storage.md)
     - [Cài đặt mft tools trên Proxmox Server](Proxmox%20VE/Setup%20Proxmox/Cai-dat-mft-tools-tren-Proxmox-Server-de-quan-ly-Card-Mellanox.md)
-    - [Cài đặt và cấu hình Proxmox VE](Proxmox%20VE/Setup%20Proxmox/Cài%20đặt%20và%20cấu%20hình%20Proxmox%20VE.md)
     - [Cài Zabbix Agent trên Proxmox](Proxmox%20VE/Setup%20Proxmox/Cai-Zabbix-Agent-tren-Proxmox.md)
     - [Cấu hình Nginx Proxy cho VM trên Proxmox](Proxmox%20VE/Setup%20Proxmox/Cấu%20hình%20Nginx%20Proxy%20cho%20VM%20trên%20Proxmox.md)
     - [Cấu hình Proxmox với Ceph Storage](Proxmox%20VE/Setup%20Proxmox/Cấu%20hình%20Proxmox%20với%20Ceph%20Storage.md)
