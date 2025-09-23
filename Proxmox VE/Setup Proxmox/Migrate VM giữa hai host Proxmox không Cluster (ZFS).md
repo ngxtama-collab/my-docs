@@ -30,3 +30,42 @@ Di chuyển một máy ảo (VM) đang sử dụng **ZFS storage** từ một ho
 ```bash
 zfs snapshot Datastore/vm-110-disk-0@snap
 zfs snapshot Datastore/vm-110-disk-1@snap
+
+---
+
+###2️⃣ Gửi ZFS snapshot sang host B và đổi tên volume theo VM mới
+
+```bash
+qm create 100 --name TenVM --memory 4096 --cores 4 --net0 virtio,bridge=vmbr0
+
+---
+
+###3️⃣ Trên host B - tạo VM mới (ID 100)
+
+```bash
+qm create 100 --name TenVM --memory 4096 --cores 4 --net0 virtio,bridge=vmbr0
+
+---
+
+###4️⃣ Gắn disk ZFS vào VM 100
+
+```bash
+qm set 100 --scsi0 Datastore:vm-100-disk-0
+qm set 100 --scsi1 Datastore:vm-100-disk-1
+
+---
+
+###5️⃣ Khởi động và kiểm tra VM
+
+```bash
+qm start 100
+
+---
+
+##🔁 Tuỳ chọn: Giữ nguyên ID VM (110)
+
+```bash
+qm create 110 --name TenVM --memory 4096 --cores 4 --net0 virtio,bridge=vmbr0
+qm set 110 --scsi0 Datastore:vm-110-disk-0
+qm set 110 --scsi1 Datastore:vm-110-disk-1
+
