@@ -7,7 +7,7 @@
     - [Add RBD Ceph Storage](Proxmox%20VE/Setup%20Proxmox/Add%20RBD%20Ceph%20Storage.md)
     - [Cài đặt mst tools trên Proxmox Server](Proxmox%20VE/Setup%20Proxmox/Cài%20đặt%20mst%20tools%20trên%20Proxmox%20Server%20để%20kiểm%20tra%20ổ%20đĩa.md)
     - [Cài đặt và cấu hình Proxmox VE](Proxmox%20VE/Setup%20Proxmox/Cài%20đặt%20và%20cấu%20hình%20Proxmox%20VE.md)
-    - [Cài Zabbix Agent trên Proxmox](Proxmox%20VE/Setup%20Proxmox/Cài%20Zabbix%20Agent%20trên%20Proxmox.md)
+    - [Cài Zabbix Agent trên Proxmox](Proxmox%20VE/Setup%20Proxmox/Cai-Zabbix-Agent-tren-Proxmox.md)
     - [Cấu hình Nginx Proxy cho VM trên Proxmox](Proxmox%20VE/Setup%20Proxmox/Cấu%20hình%20Nginx%20Proxy%20cho%20VM%20trên%20Proxmox.md)
     - [Cấu hình Proxmox với Ceph Storage](Proxmox%20VE/Setup%20Proxmox/Cấu%20hình%20Proxmox%20với%20Ceph%20Storage.md)
     - [Force NTP SYNC trên Proxmox bằng Chrony](Proxmox%20VE/Setup%20Proxmox/Force%20NTP%20SYNC%20trên%20Proxmox%20bằng%20Chrony.md)
