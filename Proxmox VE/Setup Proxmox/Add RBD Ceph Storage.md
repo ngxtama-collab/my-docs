@@ -1,27 +1,23 @@
-1 . Cài Ceph package cho OS
+# Ceph Storage
 
-<img
-src="../images/media/2.1/1.png"
-style="width:6.5in;height:3.03472in"
-alt="A screenshot of a computer AI-generated content may be incorrect." /><img
-src="../images/media/2.1/2.png"
-style="width:6.5in;height:4.60764in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />
+## 1. Cài Ceph package cho OS
 
-Chỉ cài đặt các packages ko cần configure thêm
+![Ceph Install 1](../images/media/2.1/1.png)  
+![Ceph Install 2](../images/media/2.1/2.png)
 
-Copy ceph.client.admin.keyring, ceph.conf của cluster Ceph qua node
-Proxmox
+Chỉ cài đặt các packages, không cần configure thêm.
 
+Copy `ceph.client.admin.keyring`, `ceph.conf` của cluster Ceph qua node Proxmox:
+
+```bash
 mkdir /etc/pve/priv/ceph
+```
 
-ceph.conf -\> /etc/pve/
+- `ceph.conf` → `/etc/pve/`  
+- `ceph.client.admin.keyring` → `/etc/pve/priv/`
 
-ceph.client.admin.keyring -\> mkdir /etc/pve/priv/
+---
 
-Tạo RBD storage
+## 2. Tạo RBD storage
 
-<img
-src="../images/media/2.1/3.png"
-style="width:6.5in;height:3.17708in"
-alt="A screenshot of a computer AI-generated content may be incorrect." />
+![Create RBD Storage](../images/media/2.1/3.png)
