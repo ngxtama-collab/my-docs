@@ -4,7 +4,7 @@
 src="../images/media/2.1/1.png"
 style="width:6.5in;height:3.03472in"
 alt="A screenshot of a computer AI-generated content may be incorrect." /><img
-src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image2.png"
+src="../images/media/2.1/2.png"
 style="width:6.5in;height:4.60764in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -22,6 +22,6 @@ ceph.client.admin.keyring -\> mkdir /etc/pve/priv/
 Tạo RBD storage
 
 <img
-src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image3.png"
+src="../images/media/2.1/3.png"
 style="width:6.5in;height:3.17708in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
