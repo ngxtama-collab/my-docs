@@ -5,7 +5,7 @@
 Bước 1: Tải phần mềm
 Download file ISO `VeeamBackup&Replication_12.2.0.334_20240926.iso` từ trang chủ Veeam.
 
-![Download](media/image1.png)
+![Download](../images/media/1.2/img1.png)
 
 Bước 2: Cài đặt
 Giải nén file ISO và chạy `Setup.exe`
