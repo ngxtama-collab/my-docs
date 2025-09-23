@@ -6,7 +6,7 @@
 uname -r
 ```
 
-![Header Version](../images/media/image1.png)
+![Header Version](../images/2.3/1.png)
 
 ## 2. Cài đặt các package cần thiết
 
@@ -30,7 +30,7 @@ cd mft-4.22.1-307-x86_64-deb/
 ./install
 ```
 
-![Install MFT](../images/media/image2.png)
+![Install MFT](../images/2.3/2.png)
 
 ### Start service
 
