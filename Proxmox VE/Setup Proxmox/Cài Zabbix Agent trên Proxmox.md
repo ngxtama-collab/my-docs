@@ -14,7 +14,7 @@ Sau đó kích hoạt nó bằng lệnh dpkg như sau: *sudo dpkg -i
 zabbix-release_5.0-1+focal_all.deb*
 
 <img
-src="../images/media/2.2/1.png"
+src="../images/2.2/1.png"
 style="width:6.23958in;height:1.48958in"
 alt="A screen shot of a computer program AI-generated content may be incorrect." />
 
@@ -22,7 +22,7 @@ Khi đã có kho lưu trữ, hãy cài đặt tác nhân Zabbix: *sudo apt insta
 zabbix-agent*
 
 <img
-src="../images/media/2.2/2.png"
+src="../images/2.2/2.png"
 style="width:6.5in;height:3.37153in"
 alt="A screenshot of a computer program AI-generated content may be incorrect." />
 
@@ -30,7 +30,7 @@ Khi quá trình cài đặt hoàn tất, hãy kiểm tra xem daemon Zabbix-agent
 đang chạy hay không như sau: *sudo systemctl status zabbix-agent*
 
 <img
-src="../images/media/2.2/3.png"
+src="../images/2.2/3.png"
 style="width:6.5in;height:2.56389in"
 alt="A computer screen with white text AI-generated content may be incorrect." />
 
@@ -38,13 +38,13 @@ Thay đổi đối với tệp cấu hình tại /etc/zabbix/zabbix_agentd.conf:
 vim /etc/zabbix/zabbix_agentd.conf*
 
 <img
-src="../images/media/2.2/4.png"
+src="../images/2.2/4.png"
 style="width:6.5in;height:0.43819in" />
 
 Thay đổi cấu hình trong file ở một số chỗ như sau:
 
 <img
-src="../images/media/2.2/5.png"
+src="../images/2.2/5.png"
 style="width:3.35417in;height:0.72917in"
 alt="A black background with white numbers AI-generated content may be incorrect." />
 
@@ -55,13 +55,13 @@ zabbix-agent*
 *Cài tool lm-sensors:*
 
 <img
-src="../images/media/2.2/6.png"
+src="../images/2.2/6.png"
 style="width:6.5in;height:2.42361in"
 alt="A screen shot of a computer AI-generated content may be incorrect." /><img
-src="../images/media/2.2/7.png"
+src="../images/2.2/7.png"
 style="width:6.5in;height:1.24167in"
 alt="A black screen with white text AI-generated content may be incorrect." /><img
-src="../images/media/2.2/8.png"
+src="../images/2.2/8.png"
 style="width:5.41667in;height:6.35417in"
 alt="A screenshot of a computer program AI-generated content may be incorrect." />
 
@@ -70,13 +70,13 @@ alt="A screenshot of a computer program AI-generated content may be incorrect." 
 Truy cập địa chỉ ip Zabbix server qua tài khoản Admin/zabbix.
 
 <img
-src="../images/media/2.2/9.png"
+src="../images/2.2/9.png"
 style="width:6.5in;height:2.76736in"
 alt="A screenshot of a computer AI-generated content may be incorrect." /><img
-src="../images/media/2.2/10.png"
+src="../images/2.2/10.png"
 style="width:6.5in;height:6.02083in"
 alt="A screenshot of a computer program AI-generated content may be incorrect." /><img
-src="../images/media/2.2/11.png"
+src="../images/2.2/11.png"
 style="width:6.5in;height:3.125in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
@@ -97,9 +97,9 @@ Copy đoạn code sau vào file vừa tạo được:
 *sudo systemctl restart zabbix-agent*
 
 <img
-src="../images/media/2.2/12.png"
+src="../images/2.2/12.png"
 style="width:5.9375in;height:4.23958in"
 alt="A screenshot of a web page AI-generated content may be incorrect." /><img
-src="../images/media/2.2/13.png"
+src="../images/2.2/13.png"
 style="width:6.5in;height:1.98472in"
 alt="A graph with lines and numbers AI-generated content may be incorrect." />
