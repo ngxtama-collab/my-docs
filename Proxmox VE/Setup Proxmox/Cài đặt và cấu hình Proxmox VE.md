@@ -3,7 +3,7 @@
 Chọn Install Proxmox VE
 
 <img
-src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image1.png"
+src="../images/1.1/1.png"
 style="width:6.5in;height:4.75in"
 alt="A screenshot of a computer AI-generated content may be incorrect." />
 
