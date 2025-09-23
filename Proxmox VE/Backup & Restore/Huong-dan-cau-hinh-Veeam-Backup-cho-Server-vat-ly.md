@@ -10,7 +10,7 @@ Download file ISO `VeeamBackup&Replication_12.2.0.334_20240926.iso` từ trang c
 Bước 2: Cài đặt
 Giải nén file ISO và chạy `Setup.exe`
 
-![Setup](media/image2.png)
+![Setup](../images/media/1.2/img2.png)
 
 Chọn **Install Veeam Backup & Replication**  
 Tiếp tục nhấn **Next** cho tới bước chọn tài khoản.
@@ -18,23 +18,23 @@ Tiếp tục nhấn **Next** cho tới bước chọn tài khoản.
 Bước 3: Thiết lập tài khoản dịch vụ
 Dùng **Local System account** hoặc nhập tài khoản domain.
 
-![Service Account](media/image3.png)
+![Service Account](../images/media/1.2/img3.png)
 
 Bước 4: Kết nối SQL Server
 - Nếu có SQL Server riêng → nhập thông tin kết nối.  
 - Nếu không, Veeam sẽ tự cài SQL Express.
 
-![SQL 1](media/image4.png)  
-![SQL 2](media/image5.png)
+![SQL 1](../images/media/1.2/img4.png)  
+![SQL 2](../images/media/1.2/img5.png)
 
 Bước 5: Hoàn tất cài đặt
 Nhấn **Install** để bắt đầu.  
 
-![Install](media/image6.png)
+![Install](../images/media/1.2/img6.png)
 
 Chọn **Finish** sau khi hoàn tất.  
 
-![Finish](media/image7.png)
+![Finish](../images/media/1.2/img7.png)
 
 Khởi động ứng dụng và nhấn **Connect**.
 
@@ -46,7 +46,7 @@ Vào **Backup Infrastructure** → **Add Backup Repository**
 Chọn loại repo: Windows, Linux, NAS…  
 Chỉ định đường dẫn lưu trữ (ví dụ: `D:\VeeamBackup`) và xác nhận.
 
-![Repository](media/image8.png)
+![Repository](../images/media/1.2/img8.png)
 
 ---
 
@@ -55,7 +55,7 @@ Chỉ định đường dẫn lưu trữ (ví dụ: `D:\VeeamBackup`) và xác n
 Vào **Home** → **Jobs** → **Backup Job**  
 Chọn **Windows Computer** → đặt tên job.
 
-![New Job](media/image9.png)
+![New Job](../images/media/1.2/img9.png)
 
 - Thêm server vật lý cần sao lưu.  
 - Chọn chế độ backup: Entire machine / Volume / File-level.  
@@ -63,7 +63,7 @@ Chọn **Windows Computer** → đặt tên job.
 - Chọn Repository đã tạo.  
 - Xác nhận và chạy thử lần đầu.
 
-![Running Job](media/image10.png)
+![Running Job](../images/media/1.2/img10.png)
 
 ---
 
@@ -77,7 +77,7 @@ Chọn kiểu phục hồi:
 
 Làm theo wizard để chọn thời điểm phục hồi và đích đến.
 
-![Restore](media/image11.png)
+![Restore](../images/media/1.2/img11.png)
 
 ---
 
