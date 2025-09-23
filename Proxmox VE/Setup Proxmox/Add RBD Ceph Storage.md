@@ -1,7 +1,7 @@
 1 . Cài Ceph package cho OS
 
 <img
-src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image1.png"
+src="../images/media/2.1/1.png"
 style="width:6.5in;height:3.03472in"
 alt="A screenshot of a computer AI-generated content may be incorrect." /><img
 src="C:\Users\NGUYEN THANH TAM\my-docs\Proxmox VE\images/media/image2.png"
